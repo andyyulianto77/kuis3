@@ -811,6 +811,269 @@ class QuizSheetsSender extends LitElement {
 
 customElements.define('quiz-sheets-sender', QuizSheetsSender);
 
+/* Expanding Cards */
+class ExpandingCards extends HAXCMSLitElementTheme {
+  static get haxProperties() {
+    return {
+      canScale: true,
+      canPosition: true,
+      canEditSource: false,
+      gizmo: {
+        title: "Expanding Cards",
+        description: "An expanding card gallery component",
+        icon: "image:view-carousel",
+        color: "blue",
+        groups: ["Content", "Media"],
+        handles: [],
+        meta: { 
+          author: "Your Name", 
+          owner: "Your Organization" 
+        },
+      },
+      settings: {
+        quick: [],
+        configure: [
+          {
+            property: "panels",
+            title: "Panels",
+            description: "The panels to display in the gallery",
+            inputMethod: "array",
+            properties: [
+              {
+                property: "imageUrl",
+                title: "Image URL",
+                description: "The URL of the image for the panel",
+                inputMethod: "textfield",
+                required: true,
+              },
+              {
+                property: "title",
+                title: "Title",
+                description: "The title to display on the panel",
+                inputMethod: "textfield",
+                required: true,
+              },
+            ],
+          },
+        ],
+        advanced: [],
+      },
+    };
+  }
+
+  static styles = css`
+    @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .container {
+      display: flex;
+      width: 90vw;
+    }
+
+    .panel {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 80vh;
+      border-radius: 50px;
+      color: #fff;
+      cursor: pointer;
+      flex: 0.5;
+      margin: 10px;
+      position: relative;
+      -webkit-transition: all 700ms ease-in;
+      transition: all 700ms ease-in;
+    }
+
+    .panel h3 {
+      font-size: 24px;
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      margin: 0;
+      opacity: 0;
+    }
+
+    .panel.active {
+      flex: 5;
+    }
+
+    .panel.active h3 {
+      opacity: 1;
+      transition: opacity 0.3s ease-in 0.4s;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        width: 100vw;
+      }
+
+      .panel:nth-of-type(4),
+      .panel:nth-of-type(5) {
+        display: none;
+      }
+    }
+  `;
+
+  static properties = {
+    panels: { type: Array },
+    activePanel: { type: Number }
+  };
+
+  static get tag() {
+    return "expanding-cards";
+  }
+
+  constructor() {
+    super();
+    this.panels = [
+      {
+        imageUrl: 'https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+        title: 'Explore The World'
+      },
+      {
+        imageUrl: 'https://images.unsplash.com/photo-1572276596237-5db2c3e16c5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+        title: 'Wild Forest'
+      },
+      {
+        imageUrl: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80',
+        title: 'Sunny Beach'
+      },
+      {
+        imageUrl: 'https://images.unsplash.com/photo-1551009175-8a68da93d5f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80',
+        title: 'City on Winter'
+      },
+      {
+        imageUrl: 'https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+        title: 'Mountains - Clouds'
+      }
+    ];
+    this.activePanel = 0;
+  }
+
+  _handlePanelClick(index) {
+    this.activePanel = index;
+  }
+
+  render() {
+    return html`
+      <div class="container">
+        ${this.panels.map((panel, index) => html`
+          <div
+            class="panel ${index === this.activePanel ? 'active' : ''}"
+            style="background-image: url('${panel.imageUrl}')"
+            @click=${() => this._handlePanelClick(index)}
+          >
+            <h3>${panel.title}</h3>
+          </div>
+        `)}
+      </div>
+    `;
+  }
+}
+
+customElements.define(ExpandingCards.tag, ExpandingCards);
+
+/* Hero Section */
+class HeroSection extends LitElement {
+  static styles = css`
+    :host {
+      display: block;
+      margin-bottom: 2rem;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80');
+      background-size: cover;
+      height: 540px;
+      position: relative;
+      z-index: -1;
+      border-radius: 0;
+      margin: 0;
+      padding: 0;
+    }
+    .hero::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+      bottom: 0;
+    }
+    .hero-container {
+      color: white;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-title {
+      font-weight: 200;
+      font-size: 2.6em;
+      margin-top: 100px;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+      margin-bottom: 50px;
+    }
+    .hero-title span {
+      font-weight: 500;
+    }
+    .hero-button {
+      border-radius: 40px;
+      text-transform: uppercase;
+      margin-top: 1rem;
+      font-size: 1.2em;
+      padding: .5em 2em;
+      color: #fff;
+      background: #17a2b8;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3);
+    }
+    @media (min-width: 992px) {
+      .hero {
+        margin-top: -90px;
+        height: 640px;
+      }
+      .hero-title {
+        font-size: 5em;
+        margin-top: 150px;
+      }
+    }
+  `;
+
+  static properties = {
+    title: { type: String },
+    btnText: { type: String },
+    btnLink: { type: String }
+  };
+
+  constructor() {
+    super();
+    this.title = "Get work done <span>faster</span> <br>and <span>better</span> with us";
+    this.btnText = "View Our Work";
+    this.btnLink = "#";
+  }
+
+  render() {
+    return html`
+      <section class="hero">
+        <div class="hero-container">
+          <h1 class="hero-title" .innerHTML=${this.title}></h1>
+          <a href="${this.btnLink}" class="hero-button">${this.btnText}</a>
+        </div>
+      </section>
+    `;
+  }
+}
+customElements.define('hero-section', HeroSection);
+
 /**
  * `CustomPortoTheme`
  * `CustomPortoTheme based on modern flex design system`
