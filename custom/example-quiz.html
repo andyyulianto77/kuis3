@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Contoh Quiz 3 Soal</title>
+  <script type="module" src="./src/kuis-confeti.js"></script>
+  <script type="module" src="./src/quiz-sheets-sender.js"></script>
+  <style>
+    body { background: #f3f4f6; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+  </style>
+</head>
+<body>
+  <!-- Overlay confetti -->
+  <kuis-confeti id="confetti" duration="2000" particle-count="180"></kuis-confeti>
+
+  <!-- Quiz dengan 3 soal -->
+  <confetti-quiz
+    questions='[
+      {"question":"Ibukota Indonesia?","answer":"jakarta"},
+      {"question":"2 + 2 = ?","answer":"4"},
+      {"question":"Warna bendera Indonesia bagian atas?","answer":"merah"}
+    ]'
+    autoload-results
+  ></confetti-quiz>
+
+  <!-- Pengiriman hasil ke Google Sheets -->
+  <quiz-sheets-sender
+    web-app-url="https://script.google.com/macros/s/AKfycbw3KlogRYEpTa9-xMkPQdohfFGkVbER7DKMc_SZxhyTn8wtlhfzE6REBVeFOhf5Y0sQ/exec"
+  ></quiz-sheets-sender>
+</body>
+</html>

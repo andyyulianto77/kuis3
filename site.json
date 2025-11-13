@@ -1,0 +1,227 @@
+{
+  "id": "0926e450-e8f1-487b-ba4e-ec98498e622e",
+  "title": "kuis",
+  "author": "",
+  "description": "own course",
+  "license": "by-sa",
+  "metadata": {
+    "author": {},
+    "site": {
+      "name": "kuis",
+      "logo": "assets/banner.jpg",
+      "settings": {
+        "lang": "en-US",
+        "publishPagesOn": true,
+        "canonical": true
+      },
+      "created": 1762212603,
+      "updated": 1762970941,
+      "git": {
+        "vendor": "github",
+        "branch": "gh-pages"
+      }
+    },
+    "theme": {
+      "element": "custom-porto-theme",
+      "path": "./custom/src/custom-porto-theme.js",
+      "name": "CustomPortoTheme"
+    },
+    "node": {
+      "fields": {}
+    },
+    "build": {
+      "version": "11.0.5",
+      "structure": "course",
+      "type": "own"
+    }
+  },
+  "items": [
+    {
+      "id": "item-b3767224-058a-4031-a276-bae9e4a79b7a",
+      "indent": 0,
+      "location": "pages/item-b3767224-058a-4031-a276-bae9e4a79b7a/index.html",
+      "slug": "welcome",
+      "order": 0,
+      "parent": null,
+      "title": "Welcome to kuis",
+      "description": "",
+      "metadata": {
+        "created": 1762212602,
+        "updated": 1762212602
+      }
+    },
+    {
+      "id": "item-2dabd214-5a54-4405-89d9-455237ac8b8c",
+      "indent": 0,
+      "location": "pages/item-2dabd214-5a54-4405-89d9-455237ac8b8c/index.html",
+      "slug": "page",
+      "order": 1,
+      "parent": null,
+      "title": "Page",
+      "description": "\n\nDeep thoughts..\nI at times, enjoy coffee. Those times, are all times.\nItemItem\nHeading\n",
+      "metadata": {
+        "created": 1762212838,
+        "updated": 1762213104,
+        "images": {},
+        "videos": {},
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 1,
+        "files": [
+          {
+            "path": "C:\\Users\\Administrator\\Downloads\\git\\andyprodistik\\kuis\\files\\kucing.jpg",
+            "fullUrl": "/C:\\Users\\Administrator\\Downloads\\git\\andyprodistik\\kuis/files/kucing.jpg",
+            "url": "files/kucing.jpg",
+            "type": "image/jpeg",
+            "name": "kucing.jpg",
+            "size": 17200
+          }
+        ]
+      }
+    },
+    {
+      "id": "item-9dc1e752-3e55-4d6c-8376-f5e3cad1c79f",
+      "indent": 0,
+      "location": "pages/item-9dc1e752-3e55-4d6c-8376-f5e3cad1c79f/index.html",
+      "slug": "page-1",
+      "order": 2,
+      "parent": null,
+      "title": "Page",
+      "description": "\nSelf evident, Refer back to 1st gradeConsider that numbers tend to go zero, one, two...\nBy the end of this lesson, you should be able to...\nWhat is strawberry in Spanishfresa\n\n",
+      "metadata": {
+        "created": 1762214510,
+        "updated": 1762214759,
+        "images": {},
+        "videos": {},
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 1,
+        "files": [
+          {
+            "path": "C:\\Users\\Administrator\\Downloads\\git\\andyprodistik\\kuis\\files\\etika.jpg",
+            "fullUrl": "/C:\\Users\\Administrator\\Downloads\\git\\andyprodistik\\kuis/files/etika.jpg",
+            "url": "files/etika.jpg",
+            "type": "image/jpeg",
+            "name": "etika.jpg",
+            "size": 8645
+          }
+        ]
+      }
+    },
+    {
+      "id": "item-70f63147-d357-4aeb-8552-41aafdca6f6e",
+      "indent": 0,
+      "location": "pages/item-70f63147-d357-4aeb-8552-41aafdca6f6e/index.html",
+      "slug": "page-2",
+      "order": 3,
+      "parent": null,
+      "title": "Page",
+      "description": "\n\n\n\n",
+      "metadata": {
+        "created": 1762215336,
+        "updated": 1762969338,
+        "images": {},
+        "videos": {},
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 1
+      }
+    },
+    {
+      "id": "item-kuis-simple",
+      "indent": 0,
+      "location": "pages/item-kuis/index.html",
+      "slug": "kuis",
+      "order": 4,
+      "parent": null,
+      "title": "Kuis (atribut)",
+      "description": "\nContoh Kuis (atribut)\n\n\n",
+      "metadata": {
+        "created": 1762218999,
+        "updated": 1762970940,
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 1,
+        "videos": {},
+        "images": {}
+      }
+    },
+    {
+      "id": "item-9b15cf15-bf48-4ef0-837a-d45637b0224e",
+      "indent": 0,
+      "location": "pages/item-9b15cf15-bf48-4ef0-837a-d45637b0224e/index.html",
+      "slug": "page-3",
+      "order": 5,
+      "parent": null,
+      "title": "Page",
+      "description": "",
+      "metadata": {
+        "created": 1762221614,
+        "updated": 1762221614,
+        "images": [],
+        "videos": []
+      }
+    },
+    {
+      "id": "item-kuis-fitur",
+      "indent": 0,
+      "location": "pages/item-kuis-fitur/index.html",
+      "slug": "kuis-fitur",
+      "order": 7,
+      "parent": null,
+      "title": "Fitur Kuis",
+      "description": "Ringkasan fitur kuis",
+      "metadata": {
+        "created": 1762221117,
+        "updated": 1762340194,
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 1,
+        "videos": {},
+        "images": {}
+      }
+    },
+    {
+      "id": "item-ee315496-0d49-475b-b4da-178b92fc2e97",
+      "indent": 0,
+      "location": "pages/item-ee315496-0d49-475b-b4da-178b92fc2e97/index.html",
+      "slug": "example-quiz",
+      "order": 5,
+      "parent": null,
+      "title": "Page contoh",
+      "description": "\n\n\n\n\n\n\n\n\n\n\n\n\n",
+      "metadata": {
+        "created": 1762334691,
+        "updated": 1762338808,
+        "images": {},
+        "videos": {},
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 1
+      }
+    },
+    {
+      "slug": "example-quiz",
+      "title": "Contoh Quiz 3 Soal",
+      "metadata": {
+        "quizResult": {
+          "score": 3,
+          "percentage": 100,
+          "finished": true,
+          "total": 3
+        },
+        "lastUser": {
+          "name": "Budi",
+          "phone": "08123456789",
+          "address": "Jl. Mawar No. 1"
+        }
+      }
+    }
+  ]
+}
