@@ -15,7 +15,7 @@
         "canonical": true
       },
       "created": 1762212603,
-      "updated": 1762970941,
+      "updated": 1763000326,
       "git": {
         "vendor": "github",
         "branch": "gh-pages"
@@ -44,10 +44,16 @@
       "order": 0,
       "parent": null,
       "title": "Welcome to kuis",
-      "description": "",
+      "description": "\nsdfdsafds\n",
       "metadata": {
         "created": 1762212602,
-        "updated": 1762212602
+        "updated": 1763000326,
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 1,
+        "videos": {},
+        "images": {}
       }
     },
     {
