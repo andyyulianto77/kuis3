@@ -151,22 +151,6 @@
       }
     },
     {
-      "id": "item-9b15cf15-bf48-4ef0-837a-d45637b0224e",
-      "indent": 0,
-      "location": "pages/item-9b15cf15-bf48-4ef0-837a-d45637b0224e/index.html",
-      "slug": "page-3",
-      "order": 5,
-      "parent": null,
-      "title": "Page",
-      "description": "",
-      "metadata": {
-        "created": 1762221614,
-        "updated": 1762221614,
-        "images": [],
-        "videos": []
-      }
-    },
-    {
       "id": "item-kuis-fitur",
       "indent": 0,
       "location": "pages/item-kuis-fitur/index.html",
